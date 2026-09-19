@@ -35,7 +35,6 @@ body {
 }
 
 a { color: var(--link); text-decoration: none; }
-a:visited { color: var(--link-visited); }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid var(--dark-red); outline-offset: 2px; }
 
@@ -304,7 +303,7 @@ h2.listing-heading {
   border-bottom: 1px solid var(--rule);
   padding-bottom: 4px;
 }
-
+dl#articles a:visited { color: var(--link-visited); }
 dl#articles { margin: 0; }
 dl#articles dt {
   margin: 18px 0 4px;
