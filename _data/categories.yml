@@ -1,0 +1,57 @@
+# 분류 코드표. 새 분야가 필요하면 여기에 한 줄 추가하면
+# 목록·초록·검색 페이지에 모두 반영된다. (arXiv 의 코드 체계를 따른다.)
+
+math.NT:
+  archive: Mathematics
+  name: Number Theory
+math.CO:
+  archive: Mathematics
+  name: Combinatorics
+math.RA:
+  archive: Mathematics
+  name: Rings and Algebras
+math.AG:
+  archive: Mathematics
+  name: Algebraic Geometry
+math.GT:
+  archive: Mathematics
+  name: Geometric Topology
+math.MG:
+  archive: Mathematics
+  name: Metric Geometry
+math.PR:
+  archive: Mathematics
+  name: Probability
+math.AT:
+  archive: Mathematics
+  name: Algebraic Topology
+math.DS:
+  archive: Mathematics
+  name: Dynamical Systems
+math.LO:
+  archive: Mathematics
+  name: Logic
+cs.DS:
+  archive: Computer Science
+  name: Data Structures and Algorithms
+cs.DM:
+  archive: Computer Science
+  name: Discrete Mathematics
+cs.LG:
+  archive: Computer Science
+  name: Machine Learning
+cs.CC:
+  archive: Computer Science
+  name: Computational Complexity
+physics.chem-ph:
+  archive: Physics
+  name: Chemical Physics
+physics.comp-ph:
+  archive: Physics
+  name: Computational Physics
+q-bio.QM:
+  archive: Quantitative Biology
+  name: Quantitative Methods
+stat.ML:
+  archive: Statistics
+  name: Machine Learning

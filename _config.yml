@@ -1,0 +1,55 @@
+# ---------------------------------------------------------------------------
+# Bourbaki Joint Research Project Archive — Jekyll 설정
+# 값을 바꾼 뒤에는 `bundle exec jekyll serve` 를 다시 시작해야 반영된다.
+# (_config.yml 은 파일 감시 대상이 아니다.)
+# ---------------------------------------------------------------------------
+
+title: Bourbaki
+tagline: Joint Research Project Archive
+description: >-
+  Interim presentations of the 2026 Bourbaki Joint Research Project.
+
+# arXiv:2608.00001 에서 "arXiv" 자리에 들어갈 문자열
+id_prefix: Bourbaki
+
+collection_title: 2026 Bourbaki Joint Research Project
+collection_subtitle: Interim Presentations, August 2026
+listing_period: August 2026
+
+contact: bourbaki-archive@example.org        # ← 실제 주소로 교체
+repo_url: https://github.com/USERNAME/REPO   # ← 실제 저장소로 교체
+
+# GitHub Pages 의 프로젝트 사이트(USERNAME.github.io/REPO)로 배포할 때는
+# baseurl 을 "/REPO" 로 바꾼다. 사용자/조직 사이트나 커스텀 도메인이면 "" 그대로.
+baseurl: ""
+url: ""
+
+# --- 프로젝트 컬렉션 -------------------------------------------------------
+# _projects/ 에 .md 파일을 하나 넣으면 초록 페이지가 하나 생긴다.
+collections:
+  projects:
+    output: true
+    permalink: /abs/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: abs
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+exclude:
+  - tools/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .jekyll-cache/

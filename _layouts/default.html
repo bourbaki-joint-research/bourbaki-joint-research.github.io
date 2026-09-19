@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+<script src="{{ '/assets/js/projects-data.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/site.js' | relative_url }}"></script>
+</body>
+</html>

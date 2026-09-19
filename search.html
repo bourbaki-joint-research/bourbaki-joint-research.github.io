@@ -1,63 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bourbaki Search</title>
-<meta name="description" content="Search the archive.">
-<link rel="stylesheet" href="css/arxiv.css">
-<script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
-<script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
-</head>
-<body>
-<a class="skip-link" href="#content">Skip to main content</a>
-<div class="top-banner"><div class="container">
-  We gratefully acknowledge the teams, mentors and reviewers of the <strong>2026 Bourbaki Joint Research Project</strong>.
-</div></div>
-<header class="site-header"><div class="container">
-  <a class="logo" href="index.html">
-    <span class="wordmark">Bourba<span class="glyph">&#954;</span>i</span>
-    <span class="tagline">Joint Research Project Archive</span>
-  </a>
-  <div class="header-tools">
-    <nav class="header-nav">
-      <a href="index.html">Listing</a>
-      <a href="search.html?query=&searchtype=all">Search</a>
-      <a href="https://github.com/USERNAME/REPO" rel="noopener">Source</a>
-    </nav>
-    <form class="search-form" role="search" action="search.html" method="get">
-      <label class="sr-only" for="q" style="position:absolute;left:-9999px">Search term</label>
-      <input type="text" id="q" name="query" placeholder="Search&hellip;" autocomplete="off">
-      <select name="searchtype" aria-label="Field to search">
-        <option value="all">All fields</option>
-        <option value="title">Title</option>
-        <option value="abstract">Abstract</option>
-        <option value="team">Team</option>
-        <option value="id">Identifier</option>
-      </select>
-      <button type="submit">Search</button>
-    </form>
-  </div>
-</div></header>
+---
+layout: default
+title: Search
+---
 <div class="subheader"><div class="container">
-  <h1>Bourbaki Search</h1>
+  <h1>{{ site.title }} Search</h1>
 </div></div>
+
 <main id="content"><div class="container">
   <p class="search-summary" id="search-summary"></p>
   <ul id="search-results" style="padding-left:0;margin:0"></ul>
 </div></main>
-<footer class="site-footer"><div class="container">
-  <p class="footer-links">
-    <a href="index.html">Listing</a> &middot;
-    <a href="search.html?query=&searchtype=all">Search</a> &middot;
-    <a href="https://github.com/USERNAME/REPO" rel="noopener">Repository</a> &middot;
-    <a href="mailto:bourbaki-archive@example.org">Contact</a>
-  </p>
-  <p>2026 Bourbaki Joint Research Project. Abstracts are the work of the submitting teams and are posted here with their consent.</p>
-  <p class="contact">This archive is an independent student project. It follows the page design conventions of
-     arXiv.org but is not affiliated with, endorsed by, or connected to arXiv or Cornell University.</p>
-</div></footer>
-<script src="js/projects-data.js"></script>
-<script src="js/site.js"></script>
-</body>
-</html>

@@ -1,0 +1,9 @@
+{%- for c in sl_subjects -%}
+  {%- assign cat = site.data.categories[c] -%}
+  {%- if forloop.first -%}
+    <span class="primary-subject">{{ cat.name | default: c }} ({{ c }})</span>
+  {%- else -%}
+    {{ cat.name | default: c }} ({{ c }})
+  {%- endif -%}
+  {%- unless forloop.last -%}; {% endunless -%}
+{%- endfor -%}

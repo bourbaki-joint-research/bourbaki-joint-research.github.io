@@ -192,6 +192,12 @@ blockquote.abstract {
   text-align: left;
 }
 blockquote.abstract .descriptor { margin-right: 0; }
+/* 초록 본문은 Markdown 으로 렌더링되므로 첫 문단만 descriptor 와 같은 줄에 붙인다. */
+blockquote.abstract > p { margin: 0; display: inline; }
+blockquote.abstract > p ~ p { display: block; margin-top: 0.8em; }
+
+li.arxiv-result { list-style: none; margin: 22px 0; }
+li.arxiv-result p { margin: 2px 0; }
 
 .metatable {
   border-collapse: collapse;

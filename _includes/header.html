@@ -1,0 +1,28 @@
+<div class="top-banner"><div class="container">
+  We gratefully acknowledge the teams, mentors and reviewers of the <strong>{{ site.collection_title }}</strong>.
+</div></div>
+<header class="site-header"><div class="container">
+  <a class="logo" href="{{ '/' | relative_url }}">
+    <span class="wordmark">Bourba<span class="glyph">&#954;</span>i</span>
+    <span class="tagline">{{ site.tagline }}</span>
+  </a>
+  <div class="header-tools">
+    <nav class="header-nav">
+      <a href="{{ '/' | relative_url }}">Listing</a>
+      <a href="{{ '/search.html' | relative_url }}">Search</a>
+      <a href="{{ site.repo_url }}" rel="noopener">Source</a>
+    </nav>
+    <form class="search-form" role="search" action="{{ '/search.html' | relative_url }}" method="get">
+      <label for="q" style="position:absolute;left:-9999px">Search term</label>
+      <input type="text" id="q" name="query" placeholder="Search&hellip;" autocomplete="off">
+      <select name="searchtype" aria-label="Field to search">
+        <option value="all">All fields</option>
+        <option value="title">Title</option>
+        <option value="abstract">Abstract</option>
+        <option value="team">Team</option>
+        <option value="id">Identifier</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div></header>
