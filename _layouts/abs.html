@@ -48,8 +48,6 @@ layout: default
 
         <div class="submission-history">
           <h2>Submission history</h2>
-          From: {{ page.authors | first }}
-          {%- assign em = page.email | default: "" %}{%- if em != "" %} &lt;<a href="mailto:{{ em }}">{{ em }}</a>&gt;{% else %} [view email]{% endif %}<br>
           <span class="version">[v1]</span> {{ page.submitted | date: "%a, %-d %b %Y %H:%M:%S" }} UTC
         </div>
 
