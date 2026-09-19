@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[2026.07] 최단 초순열 탐색 알고리즘 설계 (Design of a Search Algorithm for Shortest Superpermutations)</title><meta name="description" content="A superpermutation is a string that contains all \(n!\) permutations of \(n\) symbols as contiguous substrings. Finding the shortest superpermutation is difficult because the search space grows rapidly as \(n\) increases, making exhaustive search impractical for larger values ...">
+<link rel="stylesheet" href="/assets/css/arxiv.css">
+<script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
+<script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>
+</head>
+
+<body>
+<a class="skip-link" href="#content">Skip to main content</a>
+<header class="site-header"><div class="container">
+  <a class="logo" href="/">
+    <span class="wordmark">Bourbaki Joint Research</span>
+    <span class="tagline">Joint Research Project Archive</span>
+  </a>
+  <div class="header-tools">
+    <nav class="header-nav">
+      <a href="/">Listing</a>
+      <a href="/search.html">Search</a>
+      <a href="https://github.com/bourbaki-joint-research/bourbaki-joint-research.github.io" rel="noopener">Source</a>
+    </nav>
+    <form class="search-form" role="search" action="/search.html" method="get">
+      <label for="q" style="position:absolute;left:-9999px">Search term</label>
+      <input type="text" id="q" name="query" placeholder="Search&hellip;" autocomplete="off">
+      <select name="searchtype" aria-label="Field to search">
+        <option value="all">All fields</option>
+        <option value="title">Title</option>
+        <option value="abstract">Abstract</option>
+        <option value="team">Team</option>
+        <option value="id">Identifier</option>
+      </select>
+      <button type="submit">Search</button>
+    </form>
+  </div>
+</div></header>
+
+<div class="subheader"><div class="container">
+  <h1>Computer Science &gt; Data Structures and Algorithms</h1>
+</div></div>
+
+<main id="content"><div class="container">
+  <div class="header-breadcrumbs">
+    <span class="id">Bourbaki:2026.07</span> <span class="arch">(cs)</span>
+  </div>
+
+  <div id="abs-outer">
+    <div class="leftcolumn">
+      <div id="abs">
+        <div class="dateline">[Submitted on 16 Aug 2026]</div>
+
+        <h1 class="title mathjax"><span class="descriptor"></span>최단 초순열 탐색 알고리즘 설계 (Design of a Search Algorithm for Shortest Superpermutations)</h1>
+
+        <div class="authors"><span class="descriptor"></span><a href="/search.html?query=%EC%9C%A0%EC%98%88%EC%A4%80&amp;searchtype=team">유예준</a>, <a href="/search.html?query=%EC%9E%84%EC%A7%80%EC%88%98&amp;searchtype=team">임지수</a>, <a href="/search.html?query=%EA%B9%80%EC%8B%9C%ED%97%8C&amp;searchtype=team">김시헌</a>, <a href="/search.html?query=%EA%B9%80%EC%A2%85%ED%95%98&amp;searchtype=team">김종하</a></div>
+
+        <blockquote class="abstract mathjax"><span class="descriptor"></span><p>A superpermutation is a string that contains all \(n!\) permutations of \(n\) symbols as contiguous substrings. Finding the shortest superpermutation is difficult because the search space grows rapidly as \(n\) increases, making exhaustive search impractical for larger values of \(n\). This study proposes a heuristic algorithm for constructing short superpermutations under limited computational time. Unlike conventional permutation-level approaches, which select the next permutation to append, our method expands the string one character at a time and checks whether each newly formed length-\(n\) substring produces an uncovered permutation. To guide character selection, we introduce a deficit-based scoring function that rewards the creation of new permutations and underrepresented patterns while penalizing repeated coverage and poor future expandability. We further combine this score with Monte Carlo simulations to estimate the long-term effectiveness of each candidate character. After the fast coverage stage, remaining uncovered permutations are inserted through a patching process, followed by compression and independent output validation. The proposed algorithm will be compared with randomized greedy search, beam search, and local-search-based methods using minimum length, average length, median, standard deviation, runtime, and gap from the known lower bound. This study aims to evaluate whether character-level heuristic exploration can generate shorter superpermutation candidates more efficiently than existing heuristic baselines.</p>
+</blockquote>
+
+        <table class="metatable">
+          <tr><td class="label">Comments:</td><td>Interim presentation, 2026 Bourbaki Joint Research Project</td></tr>
+          <tr><td class="label">Subjects:</td><td><span class="primary-subject">Data Structures and Algorithms (cs.DS)</span>; Combinatorics (math.CO)</td></tr>
+          <tr><td class="label">Team:</td><td>T7</td></tr>
+          <tr><td class="label">Cite as:</td><td class="tablecell arxivid">
+            <a href="/abs/2026.07/">Bourbaki:2026.07</a> [cs.DS]</td></tr>
+          <tr><td class="label">&nbsp;</td><td>(or <a href="/abs/2026.07/">Bourbaki:2026.07v1</a> [cs.DS] for this version)</td></tr>
+        </table>
+
+        <div class="submission-history">
+          <h2>Submission history</h2>
+          From: 유예준 [view email]<br>
+          <span class="version">[v1]</span> Sun, 16 Aug 2026 16:37:31 UTC
+        </div>
+        <p class="abs-license">Non-exclusive license to distribute</p>
+      </div>
+    </div>
+
+    <div class="extra-services">
+      <div class="full-text">
+        <h2>Full-text links:</h2>
+        <h3>Access presentation:</h3>
+        <a class="abs-button" href="https://drive.google.com/open?id=1rG24Ve-LzpF_xa5xAJ9WtkqCwPk-Puvo" rel="noopener">View Slides</a>
+        <a class="abs-button abs-button-grey" href="/search.html?query=T7&amp;searchtype=team">Other entries by T7</a>
+      </div>
+
+      <div class="browse">
+        <h2>Current browse context:</h2>
+        <div class="context-line"><strong>cs.DS</strong></div>
+        <div class="context-line">
+          <a href="/abs/2026.06/" title="previous entry">&lt; prev</a>
+          &nbsp;|&nbsp;
+          <a href="/abs/2026.08/" title="next entry">next &gt;</a>
+        </div>
+        <div class="context-line">
+          <a href="/">all</a> |
+          <a href="/search.html?query=cs.DS&amp;searchtype=all">cs.DS</a> |
+          <a href="/">August 2026</a>
+        </div>
+        <h3>Change to browse by:</h3>
+        <div class="context-line">
+          <a href="/search.html?query=cs&amp;searchtype=all">cs</a><br>
+          <a href="/search.html?query=math.CO&amp;searchtype=all">math.CO</a>
+        </div>
+      </div><div class="bibtex-box">
+        <details>
+          <summary class="bib-toggle">Export BibTeX citation</summary>
+<pre class="bibtex">@misc{bourbakit72026,
+      title={최단 초순열 탐색 알고리즘 설계 (Design of a Search Algorithm for Shortest Superpermutations)},
+      author={유예준 and 임지수 and 김시헌 and 김종하},
+      year={2026},
+      eprint={2026.07},
+      archivePrefix={Bourbaki},
+      primaryClass={cs.DS}
+}</pre>
+        </details>
+      </div>
+    </div>
+  </div>
+</div></main>
+
+<footer class="site-footer"><div class="container">
+  <p class="footer-links">
+    <a href="/">Listing</a> &middot;
+    <a href="/search.html">Search</a> &middot;
+    <a href="https://github.com/bourbaki-joint-research/bourbaki-joint-research.github.io" rel="noopener">Repository</a> &middot;
+    <a href="mailto:24-054@ksa.hs.kr">Contact</a>
+  </p>
+  <p>2026 Bourbaki Joint Research Project. All Rights Reserved.</p>
+</div></footer>
+
+<script src="/assets/js/projects-data.js"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

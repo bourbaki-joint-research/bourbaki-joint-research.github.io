@@ -29,16 +29,11 @@ layout: default
       <div id="abs">
         <div class="dateline">[Submitted on {{ page.submitted | date: "%-d %b %Y" }}]</div>
 
-        <h1 class="title mathjax"><span class="descriptor">Title:</span>{{ page.title }}{% assign te = page.title_en | default: "" %}{% if te != "" %} ({{ te }}){% endif %}</h1>
+        <h1 class="title mathjax"><span class="descriptor"></span>{{ page.title }}{% assign te = page.title_en | default: "" %}{% if te != "" %} ({{ te }}){% endif %}</h1>
 
-        <div class="authors"><span class="descriptor">Authors:</span>{% for a in page.authors %}<a href="{{ '/search.html' | relative_url }}?query={{ a | url_encode }}&amp;searchtype=team">{{ a }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
+        <div class="authors"><span class="descriptor"></span>{% for a in page.authors %}<a href="{{ '/search.html' | relative_url }}?query={{ a | url_encode }}&amp;searchtype=team">{{ a }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
 
-        <div class="abs-toplinks">
-          <a class="abs-inline-button" href="{{ page.slides_url }}" rel="noopener">View Slides</a>
-          {% assign sid = page.slides_id | default: "" %}{% if sid != "" %}<a class="abs-inline-button" href="https://drive.google.com/uc?export=download&amp;id={{ sid }}" rel="noopener">Download</a>{% endif %}
-        </div>
-
-        <blockquote class="abstract mathjax"><span class="descriptor">Abstract:</span>{{ content }}</blockquote>
+        <blockquote class="abstract mathjax"><span class="descriptor"></span>{{ content }}</blockquote>
 
         <table class="metatable">
           {%- assign cmt = page.comments | default: "" %}{%- if cmt != "" %}
@@ -69,7 +64,6 @@ layout: default
         <h2>Full-text links:</h2>
         <h3>Access presentation:</h3>
         <a class="abs-button" href="{{ page.slides_url }}" rel="noopener">View Slides</a>
-        {% if sid != "" %}<a class="abs-button" href="https://drive.google.com/uc?export=download&amp;id={{ sid }}" rel="noopener">Download Slides</a>{% endif %}
         <a class="abs-button abs-button-grey" href="{{ '/search.html' | relative_url }}?query={{ page.team | url_encode }}&amp;searchtype=team">Other entries by {{ page.team }}</a>
       </div>
 
@@ -93,14 +87,6 @@ layout: default
           <a href="{{ '/search.html' | relative_url }}?query={{ c | url_encode }}&amp;searchtype=all">{{ c }}</a>
           {%- endfor %}
         </div>
-      </div>
-
-      <div class="references">
-        <h2>References &amp; Citations:</h2>
-        <ul>
-          <li><a href="https://scholar.google.com/scholar?q={{ page.title | url_encode }}" rel="noopener">Google Scholar</a></li>
-          <li><a href="https://www.semanticscholar.org/search?q={{ page.title | url_encode }}" rel="noopener">Semantic Scholar</a></li>
-        </ul>
       </div>
 
       {%- assign ob = '{' -%}

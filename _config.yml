@@ -7,17 +7,15 @@
 title: Bourbaki
 tagline: Joint Research Project Archive
 description: >-
-  Interim presentations of the 2026 Bourbaki Joint Research Project.
 
 # arXiv:2608.00001 에서 "arXiv" 자리에 들어갈 문자열
 id_prefix: Bourbaki
 
 collection_title: 2026 Bourbaki Joint Research Project
-collection_subtitle: Interim Presentations, August 2026
 listing_period: August 2026
 
-contact: bourbaki-archive@example.org        # ← 실제 주소로 교체
-repo_url: https://github.com/USERNAME/REPO   # ← 실제 저장소로 교체
+contact: 24-054@ksa.hs.kr       # ← 실제 주소로 교체
+repo_url: https://github.com/bourbaki-joint-research/bourbaki-joint-research.github.io # ← 실제 저장소로 교체
 
 # GitHub Pages 의 프로젝트 사이트(USERNAME.github.io/REPO)로 배포할 때는
 # baseurl 을 "/REPO" 로 바꾼다. 사용자/조직 사이트나 커스텀 도메인이면 "" 그대로.
