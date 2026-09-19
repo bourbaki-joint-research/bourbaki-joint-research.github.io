@@ -3,6 +3,7 @@ layout: default
 ---
 {%- comment -%} 정렬된 전체 목록에서 현재 문서의 위치를 찾아 prev/next 를 만든다. {%- endcomment -%}
 {%- assign projects = site.projects | sort: "identifier" -%}
+{%- assign pos = 0 -%}
 {%- for item in projects -%}
   {%- if item.identifier == page.identifier -%}{%- assign pos = forloop.index0 -%}{%- endif -%}
 {%- endfor -%}
@@ -102,16 +103,18 @@ layout: default
         </ul>
       </div>
 
+      {%- assign ob = '{' -%}
+      {%- assign cb = '}' -%}
       <div class="bibtex-box">
         <details>
           <summary class="bib-toggle">Export BibTeX citation</summary>
 <pre class="bibtex">@misc{bourbaki{{ page.team | downcase }}{{ page.submitted | date: "%Y" }},
-      title={{ "{" }}{{ page.title }}{% if te != "" %} ({{ te }}){% endif %}{{ "}" }},
-      author={{ "{" }}{{ page.authors | join: " and " }}{{ "}" }},
-      year={{ "{" }}{{ page.submitted | date: "%Y" }}{{ "}" }},
-      eprint={{ "{" }}{{ page.identifier }}{{ "}" }},
-      archivePrefix={{ "{" }}{{ site.id_prefix }}{{ "}" }},
-      primaryClass={{ "{" }}{{ primary }}{{ "}" }}
+      title={{ ob }}{{ page.title }}{% if te != "" %} ({{ te }}){% endif %}{{ cb }},
+      author={{ ob }}{{ page.authors | join: " and " }}{{ cb }},
+      year={{ ob }}{{ page.submitted | date: "%Y" }}{{ cb }},
+      eprint={{ ob }}{{ page.identifier }}{{ cb }},
+      archivePrefix={{ ob }}{{ site.id_prefix }}{{ cb }},
+      primaryClass={{ ob }}{{ primary }}{{ cb }}
 }</pre>
         </details>
       </div>

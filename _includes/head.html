@@ -2,7 +2,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% if page.identifier %}[{{ page.identifier }}] {{ page.title }}{% assign te = page.title_en | default: "" %}{% if te != "" %} ({{ te }}){% endif %}{% else %}{{ page.title }} &mdash; {{ site.title }}{% endif %}</title>
-<meta name="description" content="{% if page.identifier %}{{ content | strip_html | normalize_whitespace | truncate: 280 | escape }}{% else %}{{ site.description | escape }}{% endif %}">
+{%- assign desc = page.excerpt | default: site.description -%}
+<meta name="description" content="{{ desc | strip_html | normalize_whitespace | truncate: 280 | escape }}">
 <link rel="stylesheet" href="{{ '/assets/css/arxiv.css' | relative_url }}">
 <script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre","code"]}};</script>
 <script id="MathJax-script" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js"></script>

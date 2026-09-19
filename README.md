@@ -84,11 +84,36 @@ git push -u origin main
 `_config.yml` 의 `baseurl` 을 `"/REPO"` 로 바꿔야 CSS·링크가 깨지지 않는다.
 사용자 사이트(`USERNAME.github.io`)나 커스텀 도메인이면 `""` 그대로 둔다.
 
+### push 하기 전 점검
+
+```bash
+python3 tools/lint_liquid.py     # Liquid 문법 검사 (의존성 없음, 1초)
+```
+
+Ruby Liquid 는 변수의 끝을 `/\}\}?/` 로 찾는다. 즉 `{{` 뒤 **첫 번째 `}`** 에서
+토큰을 끊고 그게 `}}` 가 아니면 빌드가 통째로 실패한다. 그래서 BibTeX 처럼
+중괄호를 출력해야 할 때는 `{{ "}" }}` 대신 변수에 담아 쓴다.
+
+```liquid
+{% assign ob = '{' %}{% assign cb = '}' %}
+title={{ ob }}{{ page.title }}{{ cb }},
+```
+
+이 검사는 파이썬 Liquid 구현이 잡아내지 못하는 Jekyll 전용 오류를 잡는다.
+
 ### 로컬에서 미리 보기
 
 ```bash
 bundle install
 bundle exec jekyll serve      # http://localhost:4000
+```
+
+`github-pages` 젬 설치가 번거로우면 Jekyll 만 있어도 된다.
+(이때는 Gemfile 을 무시하도록 다른 디렉터리에 복사해서 빌드한다.)
+
+```bash
+gem install jekyll            # 또는 apt install jekyll
+jekyll build && cd _site && python3 -m http.server 4000
 ```
 
 `--livereload` 를 붙이면 파일을 저장할 때마다 새로고침된다.
